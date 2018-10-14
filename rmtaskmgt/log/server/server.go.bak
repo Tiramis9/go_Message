@@ -1,0 +1,75 @@
+package main
+
+import (
+	"context"
+	"flag"
+	"fmt"
+	"log"
+	"net"
+	"net/http"
+
+	"github.com/grpc-ecosystem/grpc-gateway/runtime"
+	"golang.org/x/net/trace"
+	"google.golang.org/grpc"
+	"google.golang.org/grpc/grpclog"
+	gw "huapu.info/rmcloud.exp/rmtaskmgt/api/gRPC" // 引入编译生成的包
+	// 引入编译生成的包
+)
+
+var (
+	Address = "127.0.0.1:50052"
+)
+
+func RunLinsten() error {
+	// grpc server
+	listen, err := net.Listen("tcp", Address)
+	if err != nil {
+		fmt.Println("Error listening", err.Error())
+		return err //终止程序
+	}
+	// grpc server
+	server := grpc.NewServer()
+	gw.RegisterManageServeServer(server, NewManageServe())
+	// 开启trace
+	// 	go startTrace()
+
+	fmt.Println("linsten" + Address)
+	err = server.Serve(listen)
+	if err != nil {
+		grpclog.Fatalf("failed to server: %v", err)
+	}
+	fmt.Println(err)
+
+	// gw server
+	ctx := context.Background()
+	ctx, cancel := context.WithCancel(ctx)
+	defer cancel()
+	opts := []grpc.DialOption{grpc.WithInsecure()}
+	gwmux := runtime.NewServeMux()
+
+	// register grpc-gateway pb
+	if err := gw.RegisterManageServeHandlerFromEndpoint(ctx, gwmux, Address, opts); err != nil {
+		log.Printf("Failed to register gw server: %v\n", err)
+	}
+	// http服务
+	mux := http.NewServeMux()
+	mux.Handle("/", gwmux)
+	return http.ListenAndServe("192.168.140.30:8080", gwmux)
+}
+
+func main() {
+	flag.Parse()
+	if err := RunLinsten(); err != nil {
+		grpclog.Fatal(err)
+	}
+
+}
+func startTrace() {
+	trace.AuthRequest = func(req *http.Request) (any, sensitive bool) {
+		return true, true
+	}
+
+	fmt.Println("Linsten:", 1)
+	http.ListenAndServe("192.168.140.30:8080", nil)
+	grpclog.Println("Trace listen on 50051")
+}

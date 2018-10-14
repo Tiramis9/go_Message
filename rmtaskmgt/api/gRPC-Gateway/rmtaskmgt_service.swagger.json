@@ -1,0 +1,124 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "rmtaskmgt_service.proto",
+    "version": "version not set"
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/v1/{messageId}": {
+      "get": {
+        "operationId": "Tasking2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/gRPCWorkReply"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "messageId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "userID",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          },
+          {
+            "name": "startFrequency",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          },
+          {
+            "name": "packageSize",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "RadioManage"
+        ]
+      },
+      "post": {
+        "operationId": "Tasking",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/gRPCWorkReply"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "messageId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/gRPCWorkRequest"
+            }
+          }
+        ],
+        "tags": [
+          "RadioManage"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "gRPCWorkReply": {
+      "type": "object",
+      "properties": {
+        "workID": {
+          "type": "string"
+        }
+      }
+    },
+    "gRPCWorkRequest": {
+      "type": "object",
+      "properties": {
+        "messageId": {
+          "type": "string"
+        },
+        "userID": {
+          "type": "string",
+          "format": "int64"
+        },
+        "startFrequency": {
+          "type": "string",
+          "format": "int64"
+        },
+        "packageSize": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    }
+  }
+}
