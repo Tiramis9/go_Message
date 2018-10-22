@@ -1,0 +1,57 @@
+1.核心已转储：
+原因：①内存未分配空间；②变量值未初始化；③注意函数形参传值
+
+2.指针传参：
+①如果是二维数组作为形参传递，形参会退化为一维数组，需要用指针“*[]”或者“**”来接形参；
+②如一维数组作形参传递，形参会退化为数组名，需要用“[]”“*”来接形参；
+
+3.**交换函数：
+只对整形变量的值进行交换--有效；不能交换字符串或者数组内容；
+#define SWAP(a,b)(a+=b,b=a-b,a-=b）或//SWAP(a,b){int temp=a;a=b;b=temp;}
+
+4.代码段定义：
+http://www.jb51.net/article/71230.htm
+
+5.函数形参有指针的情况下需要判断地址是否为NULL；
+例/*int sort(char **array1, int num2,char ***myp3 /*out*/, int *num3)
+{
+	if (array1 == NULL || myp3==NULL||num3==NULL)*/
+
+
+
+5.测试BUG：
+for (int i = 3;i < num2+num1;i++)
+	{
+		printf("%d\n", i);
+		free(p[i]);
+	}
+	exit(0);
+	system("pause");
+
+	int len = num1 + num2;
+	printBuf(p, len);
+	putchar('\n');
+	
+6.动态库的制作
+__declspec(dllexport) int myadd(int a, int b)//让工程生成.lib静态或者动态dll文件;
+#pragma comment (lib,"./mylib.lib")//关键字，在主调函数上使用，./mylib.lib静态或者动态路径及名字；
+Another setup is already running.please wait for it to finishbefore trying again
+
+
+
+
+
+数据库：
+$GOROOT/bin
+protoc 
+protoc-gen-swagger
+protoc-gen-grpc-gateway
+
+protoc -I$GOROOT/include -I.   -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis --swagger_out=logtostderr=true:. rmtaskmgt_service.proto
+
+ protoc -I$GOROOT/include -I.   -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis --go_out=plugins=grpc:. rmtaskmgt_service.proto
+
+ protoc -I$GOROOT/include -I. -I$GOPATH/src  -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis --grpc-gateway_out=logtostderr=true:. rmtaskmgt_service.proto
+
+
+使用go语言如何对goroutine控制数量，如何优雅的退出
