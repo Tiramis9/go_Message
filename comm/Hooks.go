@@ -92,6 +92,18 @@ func ConfigLocalFilesystemLogger(logPath string, logFileName string, maxAge time
 	Log.Hooks.Add(NewContextHook())
 	Log.SetLevel(logrus.InfoLevel)
 
+	
+	exist, err := PathExists(logPath)
+	if !exist {
+		// 创建文件夹
+		err := os.Mkdir(logPath, os.ModePerm)
+		if err != nil {
+			fmt.Printf("mkdir failed![%v]\n", err)
+		} else {
+			fmt.Printf("mkdir %s%s success!\n", logPath, logFileName)
+		}
+	}
+	
 	baseLogPaht := path.Join(logPath, logFileName)
 	writer, err := rotatelogs.New(
 		baseLogPaht+".%Y%m%d%H%M%S",
