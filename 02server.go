@@ -129,7 +129,25 @@ func handleCon(conn net.Conn) {
 
 		for input_scanf.Scan() {
 			connMsg := input_scanf.Text()
+	
+			/*
+			switch {
+			case connMsg == "who":
+				fmt.Println("查询用户名和在线人数")
+				fmt.Fprintln(conn, myName)
+				//查询后要返回用户的用户名，用户名存储到map中
+				//修改client结构体
 
+				//用户查询指令业务
+				dealWhoCmd(conn)
+
+			default:
+				fmt.Println(connMsg)
+				myexp := regexp.MustCompile(`\d+\.\d+`)
+				result := myexp.FindAllStringSubmatch(connMsg, 1)
+				fmt.Println(result)
+				fmt.Fprintln(conn, connMsg)
+			}*/
 			if connMsg == "who" {
 				//需要查询当前在线人数和在线用户名
 				fmt.Println("查询用户名和在线人数")
