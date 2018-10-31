@@ -1,0 +1,55 @@
+time="2018-10-31 18:00:43.049" level=info msg="start running Info" line="task/Info.go:18" package=Task
+time="2018-10-31 18:00:49.970" level=info msg="start running HandleConnect" line="server/Geolite.go:253" package=server
+time="2018-10-31 18:00:56.185" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:01:03.670" level=info msg="start running Info" line="task/Info.go:18" package=Task
+time="2018-10-31 18:01:22.930" level=info msg="start running HandleConnect" line="server/Geolite.go:253" package=server
+time="2018-10-31 18:08:24.239" level=info msg="start running Info" line="task/Info.go:18" package=Task
+time="2018-10-31 18:09:16.504" level=info msg="start running Info" line="task/Info.go:18" package=Task
+time="2018-10-31 18:09:16.530" level=info msg="net.Listen err =  listen tcp 172.16.101.8:8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted." line="task/Info.go:22" package=Task
+time="2018-10-31 18:09:29.108" level=info msg="start running Info" line="task/Info.go:18" package=Task
+time="2018-10-31 18:09:29.122" level=info msg="net.Listen err =  listen tcp 172.16.101.8:8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted." line="task/Info.go:22" package=Task
+time="2018-10-31 18:09:48.126" level=info msg="start running Info" line="task/Info.go:18" package=Task
+time="2018-10-31 18:10:09.340" level=info msg="start running HandleConnect" line="server/Geolite.go:253" package=server
+time="2018-10-31 18:10:22.306" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:10:22.306" level=info msg="start running GeoliteLookup " line="server/Geolite.go:30" package=server
+time="2018-10-31 18:10:22.306" level=info msg=223.2.2.1 line="server/Geolite.go:31" package=server
+time="2018-10-31 18:10:22.307" level=info msg="GeoliteLookup running over" line="server/Geolite.go:48" package=server
+time="2018-10-31 18:10:22.307" level=info msg="dealQuerycmd  Country CN " line="server/Geolite.go:71" package=server
+time="2018-10-31 18:11:25.943" level=info msg="start running HandleConnect" line="server/Geolite.go:253" package=server
+time="2018-10-31 18:11:25.944" level=info msg="start running HandleConnect" line="server/Geolite.go:253" package=server
+time="2018-10-31 18:11:26.118" level=info msg="start running HandleConnect" line="server/Geolite.go:253" package=server
+time="2018-10-31 18:11:26.118" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:26.119" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:26.119" level=info msg="start running GeoliteLookup " line="server/Geolite.go:30" package=server
+time="2018-10-31 18:11:26.119" level=info msg=172.16.101.8 line="server/Geolite.go:31" package=server
+time="2018-10-31 18:11:26.121" level=info msg="查询的IP信息为空" line="server/Geolite.go:65" package=server
+time="2018-10-31 18:11:26.121" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:26.121" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:26.121" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:26.122" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:26.122" level=info msg="start running GeoliteLookup " line="server/Geolite.go:30" package=server
+time="2018-10-31 18:11:26.122" level=info msg=69.0.3497.100 line="server/Geolite.go:31" package=server
+time="2018-10-31 18:11:26.122" level=info msg="ipAddress passed to Lookup cannot be nil" line="server/Geolite.go:41" package=server
+time="2018-10-31 18:11:26.123" level=info msg="查询的IP信息不存在" line="server/Geolite.go:65" package=server
+time="2018-10-31 18:11:26.123" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:26.123" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:26.123" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:26.124" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:31.132" level=info msg="start running HandleConnect" line="server/Geolite.go:253" package=server
+time="2018-10-31 18:11:31.133" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:31.136" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:31.136" level=info msg="start running GeoliteLookup " line="server/Geolite.go:30" package=server
+time="2018-10-31 18:11:31.137" level=info msg=172.16.101.8 line="server/Geolite.go:31" package=server
+time="2018-10-31 18:11:31.142" level=info msg="查询的IP信息为空" line="server/Geolite.go:65" package=server
+time="2018-10-31 18:11:31.143" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:31.143" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:31.144" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:31.144" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:31.145" level=info msg="start running GeoliteLookup " line="server/Geolite.go:30" package=server
+time="2018-10-31 18:11:31.145" level=info msg=69.0.3497.100 line="server/Geolite.go:31" package=server
+time="2018-10-31 18:11:31.146" level=info msg="ipAddress passed to Lookup cannot be nil" line="server/Geolite.go:41" package=server
+time="2018-10-31 18:11:31.148" level=info msg="查询的IP信息不存在" line="server/Geolite.go:65" package=server
+time="2018-10-31 18:11:31.148" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:31.149" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:31.149" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
+time="2018-10-31 18:11:31.149" level=info msg="start running dealQuerycmd " line="server/Geolite.go:55" package=server
