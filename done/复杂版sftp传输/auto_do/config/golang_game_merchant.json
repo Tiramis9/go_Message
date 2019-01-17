@@ -1,0 +1,16 @@
+{
+  "localcmd":[
+    "cd d:/schedule/order/itemNow/src/golang_game_merchant && tar -czvf golang_game_merchant.tar.gz action auth config global lib logic model router service vendor main.go"
+  ],
+  "upload":{
+    "srcfile":"D:/schedule/order/itemNow/src/golang_game_merchant/golang_game_merchant.tar.gz",
+    "dstpath":"/home/go/src/golang_game_merchant"
+  },
+  "cmd":[
+    "cd /home/go/src/golang_game_merchant",
+    "tar -xzvf golang_game_merchant.tar.gz",
+    "cd global",
+    "sed -i \"s/LOCAL = true/LOCAL = false/g\" const.go",
+    "sed -i \"s/ReportLocal = true/ReportLocal = true/g\" const.go"
+  ]
+}

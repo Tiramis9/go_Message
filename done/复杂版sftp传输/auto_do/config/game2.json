@@ -1,0 +1,15 @@
+{
+  "localcmd":[
+    "cd d:/schedule/order/itemNow/src/game2 && tar -czvf game2.tar.gz action auth config global lib logic model router service vendor main.go"
+  ],
+  "upload":{
+    "srcfile":"D:/schedule/order/itemNow/src/game2/game2.tar.gz",
+    "dstpath":"/home/go/src/game2"
+  },
+  "cmd":[
+    "cd /home/go/src/game2",
+    "tar -xzvf game2.tar.gz",
+    "cd global",
+    "sed -i \"s/LOCAL = true/LOCAL = false/g\" const.go"
+  ]
+}

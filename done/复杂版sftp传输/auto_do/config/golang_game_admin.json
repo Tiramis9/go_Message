@@ -1,0 +1,15 @@
+{
+  "localcmd":[
+    "cd d:/go_workspace/src/golang_game_admin && tar -czvf golang_game_admin.tar.gz action auth config global lib model router service vendor main.go"
+  ],
+  "upload":{
+    "srcfile":"D:/go_workspace/src/golang_game_admin/golang_game_admin.tar.gz",
+    "dstpath":"/home/go/src/golang_game_admin"
+  },
+  "cmd":[
+    "cd /home/go/src/golang_game_admin",
+    "tar -xzvf golang_game_admin.tar.gz",
+    "cd global",
+    "sed -i \"s/LOCAL = true/LOCAL = false/g\" const.go"
+  ]
+}
